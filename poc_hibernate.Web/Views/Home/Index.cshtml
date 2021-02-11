@@ -1,0 +1,14 @@
+﻿@model poc_hibernate.data.Student
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@Html.BeginForm("Index", "Home", FormMethod.Post) 
+{
+    @Html.AntiForgeryToken();
+    
+    @Html.TextBoxFor(x => x.FirstName);
+    @Html.TextBoxFor(x => x.LastName);
+
+    <button class="btn btn-primary" type="submit">Save</button>
+}

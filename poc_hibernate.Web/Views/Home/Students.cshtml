@@ -1,0 +1,21 @@
+﻿@using poc_hibernate.data;
+@model List<Student>
+@{
+    ViewBag.Title = "Students";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Students</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Id</li>
+        <li>@item.FirstName</li>
+        <li>@item.LastName</li>
+        <li>@item.AcademicStanding.ToString()</li>
+        <hr />
+    }
+</ul>
+
+
